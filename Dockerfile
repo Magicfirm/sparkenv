@@ -8,7 +8,7 @@ MAINTAINER JIN TAO <jeffkyjin@magicfirm.com>
 # Install relates.
 RUN \
         apt-get update && \
-        apt-get -y install python-pip wget ruby
+        apt-get -y install python-pip wget ruby tzdata
   
 # - update pip
 RUN pip install --upgrade pip
@@ -22,3 +22,5 @@ RUN pip install numpy numpy-stl
 # - Install mersh
 RUN gem install mersh
 
+# setting timezone
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
