@@ -8,7 +8,7 @@ MAINTAINER JIN TAO <jeffkyjin@magicfirm.com>
 # Install relates.
 RUN \
         apt-get update && \
-        apt-get -y install python-pip wget ruby tzdata
+        apt-get -y install python-pip wget ruby tzdata python-gevent gunicorn
   
 # - update pip
 RUN pip install --upgrade pip
